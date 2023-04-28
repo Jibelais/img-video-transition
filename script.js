@@ -16,10 +16,6 @@ function isInView(element) {
       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
   }
-
-// setTimeout(function() {
-//     image.style.opacity = '0';
-//   }, imageFadeTime);
    
 function switchToVideo() {
     image.style.opacity = 0;
@@ -36,10 +32,3 @@ function switchToVideo() {
         video.style.display='none'
     }
   });
-
-//   image.addEventListener('transitionend', function() {
-//     image.style.display = 'none';
-//     video.style.display = 'block';
-//   });
-
- 
