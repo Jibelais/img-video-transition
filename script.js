@@ -7,39 +7,15 @@ const video = document.getElementById('main-video');
 image.style.display = 'block';
 video.style.display="none"
 
-function isInView(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  }
 
-// setTimeout(function() {
-//     image.style.opacity = '0';
-//   }, imageFadeTime);
+setTimeout(function() {
+    image.style.opacity = '0';
+  }, imageFadeTime);
    
-function switchToVideo() {
-    image.style.opacity = 0;
-    setTimeout(function() {
-      image.style.display = "none";
-      video.style.display = "block";
-      video.play();
-    }, 2000);
-  }
-  window.addEventListener("scroll", function() {
-    if (isInView(image)) {
-      this.switchToVideo();
-    } if (!isInView(image)){
-        video.style.display='none'
-    }
-  });
 
-//   image.addEventListener('transitionend', function() {
-//     image.style.display = 'none';
-//     video.style.display = 'block';
-//   });
+  image.addEventListener('transitionend', function() {
+    image.style.display = 'none';
+    video.style.display = 'block';
+  });
 
  
