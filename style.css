@@ -1,0 +1,16 @@
+.img-size{
+    width: 1000px;
+
+}
+
+#main-img{
+    width: 1000px;
+    transition: opacity 1s ease-in-out
+}
+#main-video{
+    width: 1000px;
+    height: 600px; 
+    display: inline; 
+
+}
+
