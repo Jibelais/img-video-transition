@@ -1,16 +1,19 @@
 .img-size{
-    width: 1000px;
+    width: 100%;;
+    display: flex;
 
 }
 
 #main-img{
-    width: 1000px;
-    transition: opacity 1s ease-in-out
+    width: 100%;
+    transition: opacity 2s ease-in-out;
 }
 #main-video{
-    width: 1000px;
-    height: 600px; 
-    display: inline; 
+    width: 100vw;
+    height: 100%;
+    display: flex; 
+    clip-path: polygon(0% 30%, 100% 30%, 100% 68%, 0% 68%);
+    transform: translate3d(0,0,0);
 
 }
 

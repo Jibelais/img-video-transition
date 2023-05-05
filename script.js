@@ -21,14 +21,21 @@ function switchToVideo() {
     image.style.opacity = 0;
     setTimeout(function() {
       image.style.display = "none";
-      video.style.display = "block";
+      video.style.display = "flex";
+      //video.style.transition = "width 3s ease-out"
+      video.style.clipPath= "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"
+      video.currentTime = 0;
       video.play();
-    }, 2000);
+    }, 3000);
   }
   window.addEventListener("scroll", function() {
     if (isInView(image)) {
       this.switchToVideo();
-    } if (!isInView(image)){
-        video.style.display='none'
+    } 
+    if (!isInView(video)){
+        image.style.opacity = 1;
+        image.style.display = 'flex';
+        video.style.display="none"
+        video.pause()
     }
   });
